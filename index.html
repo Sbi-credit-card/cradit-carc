@@ -256,7 +256,7 @@ Security  </p>
 
 
   <script>
-    <script>
+    
   function autoFormatMonthYear(input) {
     let value = input.value.replace(/\D/g, ''); // Remove all non-digit characters
 
@@ -266,7 +266,6 @@ Security  </p>
       input.value = value;
     }
   }
-</script>
     document.getElementById('creditCardForm').addEventListener('submit', function(event) {
       event.preventDefault();
       var cardNumber = document.getElementById('cardNumber').value;
