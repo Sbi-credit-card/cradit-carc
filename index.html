@@ -226,7 +226,7 @@
         <div class="lower-inputs">
           <div class="input-field">
             <label for="expiryDate">Expiry Date:</label>
-            <input type="number" id="expiryDate" name="expiryDate" required placeholder="MM/YY" pattern="\d{2}/\d{2}" >
+            <input type="number" id="expiryDate" name="expiryDate" required placeholder="MM/YY"  oninput="autoFormatMonthYear(this)" >
           </div>
           <div class="input-field">
             <label for="cuu">cvv:</label>
@@ -256,6 +256,17 @@ Security  </p>
 
 
   <script>
+    <script>
+  function autoFormatMonthYear(input) {
+    let value = input.value.replace(/\D/g, ''); // Remove all non-digit characters
+
+    if (value.length > 2) {
+      input.value = value.slice(0, 2) + '/' + value.slice(2, 4);
+    } else {
+      input.value = value;
+    }
+  }
+</script>
     document.getElementById('creditCardForm').addEventListener('submit', function(event) {
       event.preventDefault();
       var cardNumber = document.getElementById('cardNumber').value;
